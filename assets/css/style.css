@@ -370,6 +370,151 @@ nav a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer */
+.footer {
+  background-color: var(--light-bg);
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.footer-info {
+  /* background: var(--light-bg, #fafafa); */
+  flex: 1 1 250px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.footer-info.site-links,
+.company-address {
+  /* background: var(--light-bg, #fafafa); */
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.footer-info p {
+  line-height: 1.6;
+  word-wrap: break-word;
+  margin-bottom: 1rem;
+}
+.company-address p {
+  margin: 2px 0;
+}
+
+.footer-info h3 {
+  margin-bottom: 0.5rem;
+}
+.footer-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-info ul li {
+  margin-bottom: 4px;
+}
+
+.footer-info ul li a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.footer-social-icons a img,
+.footer-contact-icons a img {
+  width: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-social-icons a:hover img,
+.footer-contact-icons a:hover img {
+  transform: scale(1.1);
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+/* Footer toggle button for mobile */
+.footer-toggle {
+  display: none; /* only for mobile */
+  background: none;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer content */
+.footer-links,
+.company-address-content {
+  display: block; /* desktop default */
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color, #c03a2b9c);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px); /* start slightly lower */
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease;
+}
+
+#scrollToTop img {
+  width: 22px;
+  height: 22px;
+}
+
+#scrollToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scrollToTop:hover {
+  background-color: var(--btn-hover);
+  transform: scale(1.1);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   nav.navigation {
@@ -432,7 +577,7 @@ nav a:hover {
   }
 
   .product-box img {
-     width: 100%;
+    width: 100%;
     height: 100px; /* smaller so info shows */
     object-fit: cover;
     border-radius: var(--border-radius);
@@ -444,7 +589,7 @@ nav a:hover {
     text-align: center;
     flex-grow: 0; /* ensure info is not squished */
   }
-  
+
   .product-name {
     font-size: 0.85rem;
   }
@@ -468,6 +613,73 @@ nav a:hover {
   }
   .btn-about {
     align-self: center;
+  }
+
+  /* footer */
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+  }
+
+  .footer-info {
+     flex: 1 1 auto;
+    max-width: 100%;        /* full width on mobile */
+    padding: 1rem;
+  }
+
+  .footer-info h3 {
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-social-icons a img {
+    width: 22px;
+    margin-right: 6px;
+  }
+
+  .footer-social-icons,
+  .footer-contact-icons {
+    justify-content: center;
+  }
+
+  /* Footer toggle button for mobile */
+  .footer-toggle {
+    display: block;
+  }
+
+  .footer-links,
+  .company-address-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-left: 0.5rem;
+  }
+
+  /* active class expands */
+  .footer-links.active,
+  .company-address-content.active {
+    max-height: 500px; /* large enough to show content */
+  }
+
+  /* sroll to top */
+  #scrollToTop {
+    bottom: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+  }
+
+  #scrollToTop.show {
+    transform: translateY(0);
   }
 }
 
