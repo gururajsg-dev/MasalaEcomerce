@@ -12,54 +12,96 @@
     <div class="announcement">
       <p class="announcement-text">Announcement</p>
     </div>
-
-    <section class="header">
-      <div class="site-logo">
-        <a href="/">
-          <img src="assets/images/chilli_logo.jpg" alt="Site Logo" />
-        </a>
-      </div>
-
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <nav class="navigation" id="nav-menu">
-        <a href="#" id="btn-home">Home</a>
-        <a href="#" id="btn-products">Products</a>
-        <a href="#" id="btn-gallery">Gallery</a>
-        <a href="#" id="btn-receipes">Recipes</a>
-        <a href="#" id="btn-contact">Contact</a>
-      </nav>
-    </section>
-
-    <section class="hero">
-      <div class="hero-slider">
-        <div class="slide active">
-          <img src="assets/images/product1.jpg" alt="Masala Image 1" />
+    <div class="container">
+      <section class="header">
+        <div class="site-logo">
+          <a href="#">
+            <img src="assets/images/chilli_logo.jpg" alt="Site Logo" />
+          </a>
+          <h1 class="site-header">Masala products</h1>
         </div>
-        <div class="slide">
-          <img src="assets/images/product2.jpg" alt="Masala Image 2" />
-        </div>
-        <div class="slide">
-          <img src="assets/images/product3.jpg" alt="Masala Image 3" />
-        </div>
-      </div>
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
-      <div class="dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-    </section>
 
-    <section class="products"></section>
-    <section class="gallery"></section>
-    <section class="reciepes"></section>
-    <section class="contact"></section>
-    <section class="footer"></section>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav class="navigation" id="nav-menu">
+          <a href="#" id="btn-home">Home</a>
+          <a href="#" id="btn-products">Products</a>
+          <a href="#" id="btn-gallery">Gallery</a>
+          <a href="#" id="btn-receipes">Recipes</a>
+          <a href="#" id="btn-contact">Contact</a>
+        </nav>
+      </section>
+
+      <section class="hero">
+        <div class="hero-slider">
+          <div class="slide active">
+            <img src="assets/images/product1.jpg" alt="Masala Image 1" />
+          </div>
+          <div class="slide">
+            <img src="assets/images/product2.jpg" alt="Masala Image 2" />
+          </div>
+          <div class="slide">
+            <img src="assets/images/product3.jpg" alt="Masala Image 3" />
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
+
+      <section class="products">
+        <div class="products-header">
+          <h2 class="product-header-text">Our Products</h2>
+          <button class="btn-products" id="btn-products">View all</button>
+        </div>
+
+        <div class="product-list">
+          <div class="product-box">
+            <img src="assets/images/product1.jpg" alt="Product 1" />
+            <div class="product-info">
+              <h3 class="product-name">Chilli Powder</h3>
+              <p class="product-price">₹120</p>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <img src="assets/images/product2.jpg" alt="Product 2" />
+            <div class="product-info">
+              <h3 class="product-name">Turmeric Powder</h3>
+              <p class="product-price">₹90</p>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <img src="assets/images/product3.jpg" alt="Product 3" />
+            <div class="product-info">
+              <h3 class="product-name">Coriander Powder</h3>
+              <p class="product-price">₹110</p>
+            </div>
+          </div>
+
+          <div class="product-box">
+            <img src="assets/images/image4.jpg" alt="Product 4" />
+            <div class="product-info">
+              <h3 class="product-name">Garam Masala</h3>
+              <p class="product-price">₹150</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery"></section>
+      <section class="reciepes"></section>
+      <section class="contact"></section>
+      <section class="footer"></section>
+    </div>
   </body>
 </html>
