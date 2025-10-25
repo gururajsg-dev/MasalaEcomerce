@@ -222,7 +222,7 @@ nav a:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-height: 300px; /* limit height on desktop */
 }
-.product-image {
+.product-box img{
   width: 100%;
   height: 180px; 
   object-fit: cover; 
@@ -248,11 +248,7 @@ nav a:hover {
   color: var(--color-secondary);
   font-weight: 500;
 }
-.product-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Crops neatly without distortion */
-}
+
 /* Responsive */
 @media (max-width: 768px) {
   nav.navigation {
