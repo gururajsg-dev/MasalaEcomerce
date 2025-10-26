@@ -272,9 +272,7 @@ nav a:hover {
 }
 
 /* Products Section */
-.products {
-  background-color: #ffffff;
-}
+
 .products-header {
   display: flex;
   justify-content: space-between;
@@ -328,19 +326,41 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid black;
+  border: 1px solid transparent;
+  box-shadow: 0 6px 12px rgba(255, 75, 43, 0.15); /* light warm glow */
   border-radius: var(--border-radius);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
 }
-
+.product-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 2px;
+  background: linear-gradient(135deg, #ff7849, #ffb400);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.product-box:hover::before {
+  opacity: 1; /* adds animated glowing border */
+}
+.product-box:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(255, 75, 43, 0.25);
+}
 .product-box img {
   width: 100%;
   height: auto;
   object-fit: cover;
   aspect-ratio: 1 / 1;
   display: block;
+  border-bottom: 3px solid var(--secondary-color);
 }
 
 .product-info {
@@ -360,7 +380,7 @@ nav a:hover {
 .product-price {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--muted-text);
+  color: var(--primary-color);
 }
 
 /* About Section */
