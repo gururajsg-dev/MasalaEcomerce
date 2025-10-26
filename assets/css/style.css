@@ -54,11 +54,16 @@ body {
 }
 
 /* Announcement */
-.announcement {
-  background-color: #e1a100;
-  width: 100%;
-  text-align: center;
-  padding: 0.4rem 1rem;
+/* Default subtle bar */
+.announcement.default {
+  background-color: #fff6e5;
+  color: #b14a00;
+}
+
+/* Promotional variant */
+.announcement.promo {
+  background: linear-gradient(90deg, #ff6b35, #ffb400);
+  color: #fff;
 }
 
 .announcement-content {
