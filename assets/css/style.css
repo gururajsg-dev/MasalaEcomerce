@@ -152,7 +152,7 @@ nav a:hover {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: var(--text-primary);
+  background-color: var(--heading-color);
   border-radius: 2px;
   transition: all 0.3s;
 }
